@@ -34,7 +34,7 @@
 
 ### Fixed
 
-* Fixed building on Rust 1.63.0 (our MSRV) with OpenSSL 3.2 or newer.
+* Fixed building on Rust 1.77.0 (our MSRV) with OpenSSL 3.2 or newer.
 
 ## [v0.10.67] - 2024-10-15
 

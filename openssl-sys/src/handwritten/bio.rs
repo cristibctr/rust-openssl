@@ -135,14 +135,14 @@ extern "C" {
             ) -> c_int,
         >,
     ) -> c_int;
-    pub fn BIO_new_bio_dgram_pair(
-        bio1: *mut *mut BIO,
-        writebuf1: usize,
-        bio2: *mut *mut BIO,
-        writebuf2: usize,
-    ) -> c_int;
-    pub fn BIO_s_dgram_pair() -> *const BIO_METHOD;
-    pub fn BIO_s_datagram() -> *const BIO_METHOD;
+    // pub fn BIO_new_bio_dgram_pair(
+    //     bio1: *mut *mut BIO,
+    //     writebuf1: usize,
+    //     bio2: *mut *mut BIO,
+    //     writebuf2: usize,
+    // ) -> c_int;
+    // pub fn BIO_s_dgram_pair() -> *const BIO_METHOD;
+    // pub fn BIO_s_datagram() -> *const BIO_METHOD;
     pub fn BIO_get_rpoll_descriptor(b: *mut BIO, desc: *mut BIO_POLL_DESCRIPTOR) -> c_int;
     pub fn BIO_get_wpoll_descriptor(b: *mut BIO, desc: *mut BIO_POLL_DESCRIPTOR) -> c_int;
     pub fn BIO_sendmmsg(
@@ -161,5 +161,5 @@ extern "C" {
         flags: u64,
         msgs_processed: *mut usize,
     ) -> c_int;
-    pub fn BIO_err_is_non_fatal(errcode: c_uint) -> c_int;
+    // pub fn BIO_err_is_non_fatal(errcode: c_uint) -> c_int;
 }

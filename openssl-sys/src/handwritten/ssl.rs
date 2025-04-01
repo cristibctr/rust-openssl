@@ -958,8 +958,8 @@ extern "C" {
 
 #[cfg(ossl320)]
 extern "C" {
-    pub fn OSSL_QUIC_client_method() -> *const SSL_METHOD;
-    pub fn OSSL_QUIC_client_thread_method() -> *const SSL_METHOD;
+    // pub fn OSSL_QUIC_client_method() -> *const SSL_METHOD;
+    // pub fn OSSL_QUIC_client_thread_method() -> *const SSL_METHOD;
     pub fn SSL_get_event_timeout(s: *mut SSL, tv: *mut timeval, is_infinite: *mut c_int) -> c_int;
     pub fn SSL_handle_events(s: *mut SSL) -> c_int;
     pub fn SSL_get_blocking_mode(s: *mut SSL) -> c_int;

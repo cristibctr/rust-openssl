@@ -173,7 +173,7 @@ fn main() {
     check_ssl_kind();
 
     let target = env::var("TARGET").unwrap();
-
+    // println!("cargo:warning=HEREEEE {}", target);
     let (lib_dirs, include_dir) = find_openssl(&target);
     // rerun-if-changed causes openssl-sys to rebuild if the openssl include
     // dir has changed since the last build. However, this causes a rebuild
@@ -185,7 +185,10 @@ fn main() {
         }
     }
 
-    if !lib_dirs.iter().all(|p| p.exists()) {
+    if !lib_dirs.iter().all(|p| {
+        println!("cargo::warning=TEXT TO BE FOUND {}", p.display());
+        p.exists()
+    }) {
         panic!("OpenSSL library directory does not exist: {:?}", lib_dirs);
     }
     if !include_dir.exists() {
